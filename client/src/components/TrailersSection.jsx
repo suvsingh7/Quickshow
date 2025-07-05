@@ -16,12 +16,13 @@ const TrailersSection = () => {
       <div className='relative mt-6'>
         <BlurCircle top='-100px' right='-100px'/>
         
-        <ReactPlayer 
-          url={currentTrailer.videoUrl} 
-          controls={true} 
-          className="mx-auto max-w-full"
-          width="960px" 
-          height="540px"
+        <iframe
+          src={currentTrailer.videoUrl.replace('watch?v=', 'embed/')}
+          title="Trailer"
+          className="w-full max-w-[960px] aspect-video mx-auto rounded-lg"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
         />
       </div>
 
