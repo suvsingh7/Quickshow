@@ -20,3 +20,5 @@ const sendEmail = async ({ to, subject, body })=>{
 }
 
 export default sendEmail;
+
+// Inngest Function to send booking confirmation email

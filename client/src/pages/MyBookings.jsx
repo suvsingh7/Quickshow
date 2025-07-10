@@ -76,3 +76,7 @@ const MyBookings = () => {
 }
 
 export default MyBookings
+// This component displays the user's bookings, allowing them to view details and make payments if necessary.
+// It fetches the bookings from the server and displays them in a list format, with each booking showing the movie title, show time, amount, and seat numbers.
+// If the booking is not paid, a "Pay Now" button is provided to redirect the user to the payment page.
+// The component also formats the movie runtime and show date using utility functions for better readability.

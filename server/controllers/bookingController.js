@@ -53,9 +53,7 @@ export const createBooking = async (req, res)=>{
 
         await showData.save();
 
-         //Stripe Gateway Initialize
-
-         
+         // Stripe Gateway Initialize
          const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
 
          // Creating line items to for Stripe
@@ -92,7 +90,7 @@ export const createBooking = async (req, res)=>{
             }
          })
 
-         res.json({success: true, url: session.url}) 
+         res.json({success: true, url: session.url})
 
     } catch (error) {
         console.log(error.message);
