@@ -83,3 +83,5 @@ export const functions = [
     releaseSeatsAndDeleteBooking,
 
 ];
+
+// Export the Inngest client to use in other parts of the application
