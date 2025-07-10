@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 const Loading = () => {
 
-  /*const { nextUrl } = useParams()
+  const { nextUrl } = useParams()
   const navigate = useNavigate()
 
   useEffect(()=>{
@@ -12,7 +12,7 @@ const Loading = () => {
         navigate('/' + nextUrl)
       },8000)
     }
-  },[]) */
+  },[]) 
 
   return (
     <div className='flex justify-center items-center h-[80vh]'>

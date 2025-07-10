@@ -1,7 +1,7 @@
 import { inngest } from "../inngest/index.js";
 import Booking from "../models/Booking.js";
 import Show from "../models/Show.js"
-//import stripe from 'stripe'
+import stripe from 'stripe'
 
 
 // Function to check availability of selected seats for a movie
@@ -53,10 +53,10 @@ export const createBooking = async (req, res)=>{
 
         await showData.save();
 
-         // Stripe Gateway Initialize
+         //Stripe Gateway Initialize
 
-         res.json({success: true, message: "Booking created successfully"})
-         /*const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
+         
+         const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
 
          // Creating line items to for Stripe
          const line_items = [{
@@ -92,7 +92,7 @@ export const createBooking = async (req, res)=>{
             }
          })
 
-         res.json({success: true, url: session.url}) */
+         res.json({success: true, url: session.url}) 
 
     } catch (error) {
         console.log(error.message);
